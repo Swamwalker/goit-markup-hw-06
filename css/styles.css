@@ -643,6 +643,10 @@ color: var(--background-color);
     
     transform: translate(-50%, -50%);
 
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+
     height: 528px;
     width: 528px;
     background-color:var(--background-color);

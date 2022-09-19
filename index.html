@@ -359,18 +359,20 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <b class="modal-heaed">Залиште свої дані, ми вам передзвонимо</b>
-            <label for="user-name">Ім'я</label>
+            <b class="head">Залиште свої дані, ми вам передзвонимо</b>
+            <label for="user-name" class="title">Ім'я</label>
             <input type="text" name="user-name" id="user-name">
-            <label for="tel">Телефон</label>
+            <label for="tel" class="title">Телефон</label>
             <input type="tel" name="tel" id="tel">
-            <label for="mail">Пошта</label>
+            <label for="mail" class="title">Пошта</label>
             <input type="email" name="mail" id="mail">
             <label for="comment">Коментар</label>
             <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-            <input type="checkbox" name="privacy-policy" id="policy">
-            <label for="policy">Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a></label>
-            <button type="submit">Відправити</button>
+                <div class="submit">
+                    <input type="checkbox" name="privacy-policy" id="policy">
+                    <label for="policy">Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a></label>
+                    <button type="submit">Відправити</button>
+                </div>
             <button class="close" type="button" data-modal-close>
                     <svg class="icon" width="11px" height="11px">
                         <use href="./imges/icons.svg#Vector"></use>
