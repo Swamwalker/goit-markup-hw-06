@@ -643,12 +643,8 @@ color: var(--background-color);
     
     transform: translate(-50%, -50%);
 
-    display: flex;
-    padding: 40px;
-    flex-direction: column;
-
-    height: 528px;
     width: 528px;
+
     background-color:var(--background-color);
     box-shadow: 
         0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -674,4 +670,113 @@ color: var(--background-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close:focus,
+.close:hover{
+    fill: var(--akcent-color);
+}
+
+.form{
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.form-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color:var(--secondary-text-color);
+}
+.form-field input{
+    width: 100%;
+    margin: 0;
+    padding: 11px 12px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-field label{
+    margin-bottom: 4px;
+}
+.form .head{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    color: var(--primery-text-colop);
+}
+textarea{
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.checkbox .title{
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--secondary-text-color);
+}
+.checkbox .title .link{
+    color: var(--akcent-color);
+    text-decoration:underline;
+}
+.form .submit{
+    display: block;
+    justify-content: center;
+}
+.submit .checkbox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.submit .checkbox input{
+    margin-right: 9px;
+}
+.submit .checkbox input[type="checkbox"]{
+    width: 16px;
+    height: 15px;
+}
+.submit .button{
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 200px;
+    height: 50px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: var(--akcent-color);
+
+    background: var(--akcent-color);
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.85;
+    color:var(--background-color);
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.submit .button:focus,
+.submit .button:hover{
+    border-color: var(--hero-btn-hov-color);
+    background: var(--hero-btn-hov-color);
 }

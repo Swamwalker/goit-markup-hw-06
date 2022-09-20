@@ -359,20 +359,34 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <b class="head">Залиште свої дані, ми вам передзвонимо</b>
-            <label for="user-name" class="title">Ім'я</label>
-            <input type="text" name="user-name" id="user-name">
-            <label for="tel" class="title">Телефон</label>
-            <input type="tel" name="tel" id="tel">
-            <label for="mail" class="title">Пошта</label>
-            <input type="email" name="mail" id="mail">
-            <label for="comment">Коментар</label>
-            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-                <div class="submit">
-                    <input type="checkbox" name="privacy-policy" id="policy">
-                    <label for="policy">Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a></label>
-                    <button type="submit">Відправити</button>
-                </div>
+            <form class="form">
+                
+                    <b class="head">Залиште свої дані, ми вам передзвонимо</b>
+                    <div class="form-field">
+                        <label for="user-name" class="title">Ім'я</label>
+                        <input type="text" name="user-name" id="user-name" class="field">
+                    </div>
+                    <div class="form-field">
+                        <label for="tel" class="title">Телефон</label>
+                        <input type="tel" name="tel" id="tel" class="field">
+                    </div>
+                   <div class="form-field">
+                        <label for="mail" class="title">Пошта</label>
+                        <input type="email" name="mail" id="mail" class="field">
+                   </div>
+                    <div class="form-field">
+                        <label for="comment">Коментар</label>
+                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                    </div>
+                        <div class="submit">
+                            <div class="checkbox">
+                                <input type="checkbox" name="privacy-policy" id="policy" class="check">
+                                <label for="policy" class="title">Погоджуюся з розсилкою та приймаю <a href="#" class="link">Умови договору</a></label>
+                            </div>
+                            <button type="submit" class="button">Відправити</button>
+                        </div>
+            </form>
+            
             <button class="close" type="button" data-modal-close>
                     <svg class="icon" width="11px" height="11px">
                         <use href="./imges/icons.svg#Vector"></use>
