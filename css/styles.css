@@ -763,16 +763,25 @@ textarea::placeholder{
     justify-content: center;
 }
 .submit .checkbox{
+    position: relative;
     display:flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
 }
 .submit .checkbox input{
-    margin-right: 9px;
 }
 .submit .checkbox input[type="checkbox"]{
-
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 .submit .button{
     display:flex;
@@ -810,4 +819,92 @@ textarea::placeholder{
 .form-field:hover .field{
     border-color: var(--akcent-color);
     fill: var(--akcent-color);
+}
+
+
+.submit .checkbox .check{
+}
+.submit .checkbox .icon{
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 16px;
+    height: 15px;
+    background-image: url(../imges/checkbox.svg);
+    fill: var(--primery-text-colop);
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.submit .checkbox input:checked + .icon{
+    fill: var(--background-color);
+    background: var(--akcent-color);
+    background-image: url(../imges/check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-radius: 2px;
+}
+.subscribe{
+    display: inline-flex;
+}
+
+.shell{
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-form{
+    display: flex;
+    width: 570px;
+    align-items:flex-end;
+    justify-content:baseline;
+    margin-left: 93px;
+}
+.subscribe-form .title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--background-color);
+    margin-bottom: 20px;
+}
+.shell .field{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--footer-bg);
+    padding: 15px 16px;
+}
+.shell input{
+    width: 358px;
+    color: var(--background-color);
+}
+.shell::placeholder{
+    color:rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-form .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    letter-spacing: 0.06em;
+
+    color: var(--background-color);
+
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    background: var(--akcent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-color: var(--akcent-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.subscribe-form .button .icon{
+    margin-left: 10px;
 }
