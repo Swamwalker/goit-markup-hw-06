@@ -51,7 +51,6 @@ a {
     display: block;
 }
 
-}
 .conteiner{
     width: 1200px;
     margin-right: auto;
@@ -435,6 +434,9 @@ color:var(--background-color);
     display: flex;
     align-items: baseline;
 }
+.address-list{
+    flex-grow: 1;
+}
 .footer .logo {
     color: var(--background-color);
     margin-bottom: 20px;
@@ -681,11 +683,7 @@ color: var(--background-color);
 }
 
 .form{
-    width: 448px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px;
 }
 .form-field{
     position: relative;
@@ -698,17 +696,22 @@ color: var(--background-color);
     letter-spacing: 0.01em;
     color:var(--secondary-text-color);
 }
-.form-field.field{
-    font-family: inherit;
-    
-}
+
 .form-field .icon{
     position: absolute;
     left: 12px;
     top: 50%;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-field input{
+.form-field:hover .icon,
+.form-field:hover .input,
+.input:focus + .icon,
+.input:focus{
+    border-color: var(--akcent-color);
+    fill: var(--akcent-color);
+}
+
+.input {
     width: 100%;
     height: 40px;
     margin: 0;
@@ -734,11 +737,14 @@ color: var(--background-color);
     line-height: 1.15;
     color: var(--primery-text-colop);
 }
-textarea{
+.comment{
+    margin-bottom: 20px;
+}
+.textarea-input{
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    margin-bottom: 20px;
+
     cursor: pointer;
 
     padding: 11px;
@@ -752,6 +758,9 @@ textarea::placeholder{
     color: rgba(117, 117, 117, 0.5);
 }
 .checkbox .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
     line-height: 1.7;
     color: var(--secondary-text-color);
@@ -771,8 +780,7 @@ textarea::placeholder{
     align-items: center;
     margin-bottom: 30px;
 }
-.submit .checkbox input{
-}
+
 .submit .checkbox input[type="checkbox"]{
     position: absolute;
     white-space: nowrap;
@@ -796,6 +804,7 @@ textarea::placeholder{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-color: var(--akcent-color);
+    border: transparent;
 
     background: var(--akcent-color);
     cursor: pointer;
@@ -817,21 +826,10 @@ textarea::placeholder{
     background: var(--hero-btn-hov-color);
 }
 
-.form-field:hover .icon,
-.form-field:hover .field{
-    border-color: var(--akcent-color);
-    fill: var(--akcent-color);
-}
-
-
-.submit .checkbox .check{
-}
 .submit .checkbox .icon{
-    position: absolute;
-    left: 8px;
-    top: 50%;
-    transform: translateY(-50%);
     display: block;
+
+    margin-right: 8px;
     width: 16px;
     height: 15px;
     background-image: url(../imges/checkbox.svg);
@@ -848,6 +846,7 @@ textarea::placeholder{
 }
 .subscribe{
     display: inline-flex;
+    margin-left: 93px;
 }
 
 .shell{
@@ -860,7 +859,7 @@ textarea::placeholder{
     width: 570px;
     align-items:flex-end;
     justify-content:baseline;
-    margin-left: 93px;
+    
 }
 .subscribe-form .title{
     font-weight: 700;
@@ -903,6 +902,7 @@ textarea::placeholder{
     margin-left: 12px;
     background: var(--akcent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: transparent;
     border-color: var(--akcent-color);
     border-radius: 4px;
     cursor: pointer;
